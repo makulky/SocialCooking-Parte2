@@ -1,0 +1,107 @@
+@startuml
+class com.makulky.socialcooking.perfilFragment {
+- FragmentPerfilBinding? _binding
+-  binding
+- sharedViewModel svm
++ void onCreate(Bundle?)
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+- void llamarMenu()
+}
+
+
+class com.makulky.socialcooking.sharedViewModel {
++ String? usuario
+}
+
+class com.makulky.socialcooking.datosRecetas {
++ <<Create>> datosRecetas(,Int,,String,,String,,String,,String)
+}
+
+class com.makulky.socialcooking.creditFragment {
+- FragmentCreditBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.makulky.socialcooking.loginFragment {
+- FragmentLoginBinding? _binding
+-  binding
+- sharedViewModel svm
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.makulky.socialcooking.contenidoCeldaFragment {
+- FragmentContenidoCeldaBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+- void llamarMenu()
++ void onDestroyView()
+}
+
+
+class com.makulky.socialcooking.MainActivity {
+- ActivityMainBinding binding
++ void onCreate(Bundle?)
+}
+
+
+class com.makulky.socialcooking.SplashActivity {
++ void onCreate(Bundle?)
+}
+
+class com.makulky.socialcooking.recetasProvider$Companion {
++  listaRecetas
+}
+
+class com.makulky.socialcooking.recetasProvider {
++ <<Create>> recetasProvider()
+}
+
+class com.makulky.socialcooking.menuFragment {
+- FragmentMenuBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.makulky.socialcooking.adapter.recetasViewHolder {
++  binding
++ <<Create>> recetasViewHolder(View,NavController)
++ void render(datosRecetas)
+}
+
+
+class com.makulky.socialcooking.inicioFragment {
+- FragmentInicioBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+- void llamarMenu()
+- void initRecyclerView()
++ void onDestroyView()
+}
+
+
+class com.makulky.socialcooking.adapter.recetasAdapter {
++ <<Create>> recetasAdapter(List<datosRecetas>,NavController)
++ recetasViewHolder onCreateViewHolder(ViewGroup,Int)
++ Int getItemCount()
++ void onBindViewHolder(recetasViewHolder,Int)
+}
+
+
+
+androidx.fragment.app.Fragment <|-- com.makulky.socialcooking.perfilFragment
+androidx.lifecycle.ViewModel <|-- com.makulky.socialcooking.sharedViewModel
+androidx.fragment.app.Fragment <|-- com.makulky.socialcooking.creditFragment
+androidx.fragment.app.Fragment <|-- com.makulky.socialcooking.loginFragment
+androidx.fragment.app.Fragment <|-- com.makulky.socialcooking.contenidoCeldaFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.makulky.socialcooking.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.makulky.socialcooking.SplashActivity
+com.makulky.socialcooking.recetasProvider +.. com.makulky.socialcooking.recetasProvider$Companion
+androidx.fragment.app.Fragment <|-- com.makulky.socialcooking.menuFragment
+com.makulky.socialcooking.adapter.ViewHolder <|-- com.makulky.socialcooking.adapter.recetasViewHolder
+androidx.fragment.app.Fragment <|-- com.makulky.socialcooking.inicioFragment
+com.makulky.socialcooking.adapter.Adapter <|-- com.makulky.socialcooking.adapter.recetasAdapter
+@enduml

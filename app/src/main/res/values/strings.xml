@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SocialCooking</string>
+    <string name="usuario">Usuario</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="creditos">Creditos</string>
+    <string name="salir">Salir</string>
+    <string name="errorUsuario">Introduce el nombre del usuario.</string>
+    <string name="bienvenidoUsuario">Bienvenido</string>
+</resources>

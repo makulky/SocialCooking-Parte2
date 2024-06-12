@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".menuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/logoMenu"
+        android:layout_width="282dp"
+        android:layout_height="414dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189"
+        app:srcCompat="@drawable/social_cooking" />
+
+    <Button
+        android:id="@+id/iniciarButton"
+        android:layout_width="283dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/personalizado"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="iniciarBoton"
+        android:text="@string/iniciar"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoMenu"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/creditosButton"
+        android:layout_width="283dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/personalizado"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="creditosBoton"
+        android:text="@string/creditos"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iniciarButton"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <Button
+        android:id="@+id/salirButton"
+        android:layout_width="283dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/personalizado"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="salirBoton"
+        android:text="@string/salir"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditosButton"
+        app:layout_constraintVertical_bias="0.152" />
+
+    <ImageView
+        android:id="@+id/imagePerfil"
+        android:layout_width="51dp"
+        android:layout_height="58dp"
+        android:onClick="clicImagePerfil"
+        android:src="@drawable/perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

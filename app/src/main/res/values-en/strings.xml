@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SocialCooking</string>
+    <string name="usuario">User</string>
+    <string name="aceptar">Accept</string>
+    <string name="iniciar">Start</string>
+    <string name="creditos">Credits</string>
+    <string name="salir">Exit</string>
+    <string name="errorUsuario">Enter the username.</string>
+    <string name="bienvenidoUsuario">Welcome</string>
+</resources>
